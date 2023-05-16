@@ -80,7 +80,15 @@ function getStandards() {
 					description: 'Object elements must contain a text alternative after all other alternatives are exhausted.'
 				},
 				{
+					name: 'WCAG2A.Principle1.Guideline1_1.1_1_1.H53,ARIA6',
+					description: 'Object elements must contain a text alternative after all other alternatives are exhausted.'
+				},
+				{
 					name: 'WCAG2A.Principle1.Guideline1_1.1_1_1.G94,G92.Object',
+					description: 'Check that short (and if appropriate, long) text alternatives are available for non-text content that serve the same purpose and present the same information.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_1.1_1_1.G94,G92.Object,ARIA6',
 					description: 'Check that short (and if appropriate, long) text alternatives are available for non-text content that serve the same purpose and present the same information.'
 				},
 				{
@@ -116,8 +124,13 @@ function getStandards() {
 					description: 'Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.'
 				},
 				{
+					// F77 now.
 					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.H93',
 					description: 'Multiple labels exist with the same "for" attribute. If these labels refer to different form controls, the controls should have unique "id" attributes.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.F92,ARIA4',
+					description: 'This element\'s role is "presentation" but contains child elements with semantic meaning.'
 				},
 				{
 					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.H44.NonExistent',
@@ -148,6 +161,14 @@ function getStandards() {
 					description: 'Check that the title attribute identifies the purpose of the control, and that a label element is not appropriate.'
 				},
 				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.ARIA6',
+					description: 'This form control has an "aria-label" attribute that is empty or contains only spaces. It will be ignored for labelling test purposes.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.ARIA16,ARIA9',
+					description: 'This form control contains an aria-labelledby attribute, however it includes an ID "{{id}}" that does not exist on an element. The aria-labelledby attribute will be ignored for labelling test purposes.'
+				},
+				{
 					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.H44.2',
 					description: 'Form control does not have an explicit label or title attribute, identifying the purpose of the control.'
 				},
@@ -169,6 +190,14 @@ function getStandards() {
 				},
 				{
 					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.H49.AlignAttr',
+					description: 'Align attributes.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.H49.Semantic',
+					description: 'Semantic markup should be used to mark emphasised or special text so that it can be programmatically determined.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.H49.AlignAttr.Semantic',
 					description: 'Semantic markup should be used to mark emphasised or special text so that it can be programmatically determined.'
 				},
 				{
@@ -192,6 +221,10 @@ function getStandards() {
 					description: 'Incorrect headers attribute on this td element. Expected "[expected headers]" but found "[actual headers]"'
 				},
 				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.H43.IncorrectAttrNotice',
+					description: 'Check that headers attribute on td elements are correct."'
+				},
+				{
 					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.H43.HeadersRequired',
 					description: 'The relationship between td elements and their associated th elements is not defined. As this table has multiple levels of th elements, you must use the headers attribute on td elements.'
 				},
@@ -212,6 +245,10 @@ function getStandards() {
 					description: 'Not all th elements in this table have a scope attribute. These cells should contain a scope attribute to identify their association with td elements.'
 				},
 				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.H73.3.LayoutTable',
+					description: 'This table appears to be used for layout, but contains a summary attribute. Layout tables must not contain summary attributes, or if supplied, must be empty.'
+				},
+				{
 					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.H39,H73.4',
 					description: 'If this table is a data table, and both a summary attribute and a caption element are present, the summary should not duplicate the caption.'
 				},
@@ -224,12 +261,20 @@ function getStandards() {
 					description: 'If this table is a data table, consider using the summary attribute of the table element to give an overview of this table.'
 				},
 				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.H39.3.LayoutTable',
+					description: 'This table appears to be used for layout, but contains a caption element. Layout tables must not contain captions.'
+				},
+				{
 					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.H39.3.Check',
 					description: 'If this table is a data table, check that the caption element accurately describes this table.'
 				},
 				{
 					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.H39.3.NoCaption',
 					description: 'If this table is a data table, consider using a caption element to the table element to identify this table.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.H71.NoLegend',
+					description: 'Fieldset does not contain a legend element. All fieldsets should contain a legend element that describes a description of the field group.'
 				},
 				{
 					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.H71.3',
@@ -244,6 +289,10 @@ function getStandards() {
 					description: 'Radio buttons or check boxes with the same name attribute must be contained within a fieldset element.'
 				},
 				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.H71.SameName',
+					description: 'If these radio buttons or check boxes require a further group-level description, they should be contained within a fieldset element.'
+				},
+				{
 					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.H48.1',
 					description: 'Content appears to have the visual appearance of a bulleted list. It may be appropriate to mark this content up using a ul element.'
 				},
@@ -256,8 +305,40 @@ function getStandards() {
 					description: 'The heading structure is not logically nested. This [heading] element (should be a [correct heading] to be properly nested / appears to be the primary document heading, so should be an h1 element).'
 				},
 				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.G141_a',
+					description: 'The heading structure is not logically nested. This h{{headingNum}} element appears to be the primary document heading, so should be an h1 element.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.G141_b',
+					description: 'The heading structure is not logically nested. This h{{headingNum}} element should be an h{{properHeadingNum}} to be properly nested.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.H42.2',
+					description: 'Heading tag found with no content. Text that is not intended as a heading should not be marked up with heading tags.'
+				},
+				{
 					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.H48',
 					description: 'If this element contains a navigation section, it is recommended that it be marked up as a list.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.F68',
+					description: 'This form field should be labelled in some way. Use the label element (either with a "for" attribute or wrapped around the form field), or "title", "aria-label" or "aria-labelledby" attributes as appropriate.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.F68.HiddenAttr',
+					description: 'This form field is intended to be hidden (using the "hidden" attribute), but is also labelled in some way. There should be no need to label a hidden form field.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.F68.Hidden',
+					description: 'This hidden form field is labelled in some way. There should be no need to label a hidden form field.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.LayoutTable',
+					description: 'This table appears to be a layout table. If it is meant to instead be a data table, ensure header cells are identified using th elements.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.DataTable',
+					description: 'This table appears to be a data table. If it is meant to instead be a layout table, ensure there are no th elements, and no summary or caption.'
 				},
 				{
 					name: 'WCAG2A.Principle1.Guideline1_3.1_3_2.G57',
@@ -282,6 +363,38 @@ function getStandards() {
 				{
 					name: 'WCAG2A.Principle1.Guideline1_4.1_4_3.F24.FGColour',
 					description: 'Check that this element has an inherited background colour or image to complement the corresponding inline foreground colour.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_4.1_4_3.G18_or_G145.Abs',
+					description: 'This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least {{required}}:1.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_4.1_4_3.G18_or_G145.BgImage',
+					description: 'This element\'s text is placed on a background image. Ensure the contrast ratio between the text and all covered parts of the image are at least {{required}}:1.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_4.1_4_3.G18_or_G145.Alpha',
+					description: 'This element\'s text or background contains transparency. Ensure the contrast ratio between the text and background are at least {{required}}:1.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_4.1_4_3.G18_or_G145.Fail',
+					description: 'This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least {{required}}:1, but text in this element has a contrast ratio of {{value}}:1.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_4.1_4_6.G18_or_G145.Abs',
+					description: 'This element is absolutely positioned and the background color can not be determined. Ensure the contrast ratio between the text and all covered parts of the background are at least {{required}}:1.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_4.1_4_6.G18_or_G145.BgImage',
+					description: 'This element\'s text is placed on a background image. Ensure the contrast ratio between the text and all covered parts of the image are at least {{required}}:1.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_4.1_4_6.G18_or_G145.Alpha',
+					description: 'This element\'s text or background contains transparency. Ensure the contrast ratio between the text and background are at least {{required}}:1.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_4.1_4_6.G18_or_G145.Fail',
+					description: 'This element has insufficient contrast at this conformance level. Expected a contrast ratio of at least {{required}}:1, but text in this element has a contrast ratio of {{value}}:1.'
 				},
 				{
 					name: 'WCAG2A.Principle2.Guideline2_1.2_1_1.SCR20.DblClick',
@@ -729,6 +842,18 @@ function getStandards() {
 					description: 'If this element contains a navigation section, it is recommended that it be marked up as a list.'
 				},
 				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.F68',
+					description: 'This form field should be labelled in some way. Use the label element (either with a "for" attribute or wrapped around the form field), or "title", "aria-label" or "aria-labelledby" attributes as appropriate.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.F68.HiddenAttr',
+					description: 'This form field is intended to be hidden (using the "hidden" attribute), but is also labelled in some way. There should be no need to label a hidden form field.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.F68.Hidden',
+					description: 'This hidden form field is labelled in some way. There should be no need to label a hidden form field.'
+				},
+				{
 					name: 'WCAG2AA.Principle1.Guideline1_3.1_3_2.G57',
 					description: 'Check that the content is ordered in a meaningful sequence when linearised, such as when style sheets are disabled.'
 				},
@@ -847,6 +972,10 @@ function getStandards() {
 				{
 					name: 'WCAG2AA.Principle1.Guideline1_4.1_4_13_F95.Check',
 					description: 'Check that where receiving and then removing pointer hover or keyboard focus triggers additional content to become visible and then hidden, the following are true: \nDismissable: A mechanism is available to dismiss the additional content without moving pointer hover or keyboard focus, unless the additional content communicates an input error or does not obscure or replace other content; \nHoverable: If pointer hover can trigger the additional content, then the pointer can be moved over the additional content without the additional content disappearing; \nPersistent: The additional content remains visible until the hover or focus trigger is removed, the user dismisses it, or its information is no longer valid.'
+				},
+				{
+					name: 'WCAG2AA.Principle2.Guideline2_1.2_1_1.G90',
+					description: 'Ensure the functionality provided by an event handler for this element is available through the keyboard.'
 				},
 				{
 					name: 'WCAG2AA.Principle2.Guideline2_1.2_1_1.SCR20.DblClick',
@@ -1214,6 +1343,10 @@ function getStandards() {
 					description: 'Multiple labels exist with the same "for" attribute. If these labels refer to different form controls, the controls should have unique "id" attributes.'
 				},
 				{
+					name: 'WCAG2AAA.Principle1.Guideline1_3.1_3_1.H93',
+					description: 'Multiple labels exist with the same "for" attribute. If these labels refer to different form controls, the controls should have unique "id" attributes.'
+				},
+				{
 					name: 'WCAG2AAA.Principle1.Guideline1_3.1_3_1.H44.NonExistent',
 					description: 'This label\'s "for" attribute contains an ID that does not exist in the document.'
 				},
@@ -1354,6 +1487,18 @@ function getStandards() {
 					description: 'If this element contains a navigation section, it is recommended that it be marked up as a list.'
 				},
 				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.F68',
+					description: 'This form field should be labelled in some way. Use the label element (either with a "for" attribute or wrapped around the form field), or "title", "aria-label" or "aria-labelledby" attributes as appropriate.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.F68.HiddenAttr',
+					description: 'This form field is intended to be hidden (using the "hidden" attribute), but is also labelled in some way. There should be no need to label a hidden form field.'
+				},
+				{
+					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.F68.Hidden',
+					description: 'This hidden form field is labelled in some way. There should be no need to label a hidden form field.'
+				},
+				{
 					name: 'WCAG2AAA.Principle1.Guideline1_3.1_3_2.G57',
 					description: 'Check that the content is ordered in a meaningful sequence when linearised, such as when style sheets are disabled.'
 				},
@@ -1418,6 +1563,10 @@ function getStandards() {
 					description: 'Check that any information conveyed using colour alone is also available in text, or through other visual cues.'
 				},
 				{
+					name: 'WCAG2AAA.Principle1.Guideline1_4.1_4_1.G14,G18',
+					description: 'Check that any information conveyed using colour alone is also available in text, or through other visual cues.'
+				},
+				{
 					name: 'WCAG2AAA.Principle1.Guideline1_4.1_4_2.F23',
 					description: 'If any audio plays automatically for longer than 3 seconds, check that there is the ability to pause, stop or mute the audio.'
 				},
@@ -1472,6 +1621,10 @@ function getStandards() {
 				{
 					name: 'WCAG2AAA.Principle1.Guideline1_4.1_4_10_C32,C31,C33,C38,SCR34,G206.Fixed',
 					description: 'Principle1.Guideline1_4.1_4_10_C32,C31,C33,C38,SCR34,G206.Scrolling'
+				},
+				{
+					name: 'WCAG2AAA.Principle1.Guideline1_4.1_4_10_C32,C31,C33,C38,SCR34,G206.Scrolling',
+					description: 'Preformatted text may require scrolling in two dimensions, which is considered a failure of this Success Criterion.'
 				},
 				{
 					name: 'WCAG2AAA.Principle1.Guideline1_4.1_4_10_C32,C31,C33,C38,SCR34,G206.Zoom',
@@ -1624,6 +1777,14 @@ function getStandards() {
 				{
 					name: 'WCAG2AAA.Principle2.Guideline2_4.2_4_1.G1,G123,G124.NoSuchIdFragment2.4.2',
 					description: 'This link points to a named anchor "[link target]" within the document, but no anchor exists with that name in the fragment tested.'
+				},
+				{
+					name: 'WCAG2AAA.Principle2.Guideline2_4.2_4_1.G1,G123,G124.NoSuchIdFragment',
+					description: 'This link points to a named anchor "[link target]" within the document, but no anchor exists with that name in the fragment tested.'
+				},
+				{
+					name: 'WCAG2AAA.Principle2.Guideline2_4.2_4_2.H25.1.NoHeadEl',
+					description: 'There is no head section in which to place a descriptive title element.'
 				},
 				{
 					name: 'WCAG2AAA.Principle2.Guideline2_4.2_4_2.H25.1.NoTitleEl',
