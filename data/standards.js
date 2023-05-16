@@ -218,11 +218,11 @@ function getStandards() {
 				},
 				{
 					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.H43.IncorrectAttr',
-					description: 'Incorrect headers attribute on this td element. Expected "[expected headers]" but found "[actual headers]"'
+					description: 'Incorrect headers attribute on this td element. Expected "[expected headers]" but found "[actual headers]" '
 				},
 				{
 					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.H43.IncorrectAttrNotice',
-					description: 'Check that headers attribute on td elements are correct."'
+					description: 'Check that headers attribute on td elements are correct.'
 				},
 				{
 					name: 'WCAG2A.Principle1.Guideline1_3.1_3_1.H43.HeadersRequired',
